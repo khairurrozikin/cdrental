@@ -13,7 +13,7 @@ class CreateMembercd extends Migration
      */
     public function up()
     {
-        Schema::create('membercds', function (Blueprint $table) {
+        Schema::create('cdMembers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',25);
             $table->string('address',255);
@@ -32,6 +32,6 @@ class CreateMembercd extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('membercds');
+        Schema::dropIfExists('cdMembers');
     }
 }

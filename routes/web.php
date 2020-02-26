@@ -20,6 +20,9 @@ $router->get('/key', function() use($router){
 });
 
 $router->group(['prefix'=>'api'], function() use($router){
-    $router->get('tablecd',['uses'=> 'ItemController@showAlltablecd']);
-    $router->get('tablemembercd',['uses'=> 'MemberCdController@showAlltablemembercd']);
+    $router->get('cditem',['uses'=> 'ItemController@showAllCdItems']);
+    $router->get('cdmember',['uses'=> 'MemberCdController@showAllCdMembers']);
+    $router->post('savemember', 'MemberCdController@create');
+    $router->delete('delete/{id}', 'MemberCdController@destroy');
+    $router->post('update/{id}', 'MemberCdController@update');
 });
