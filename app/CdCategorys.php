@@ -8,9 +8,9 @@ class Cdcategorys extends Model{
      *
      * @var array
      */
-    protected $fillable = [
-        'name'
-    ];
+    protected $fillable = ['name'];
+    protected $primaryKey = ['category_id'];
+    protected $table = ['cdcatecorys'];
 
     /**
      * The attributes excluded from the model's JSON form.

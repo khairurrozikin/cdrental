@@ -14,7 +14,7 @@ class CreateTableReturn extends Migration
     public function up()
     {
         Schema::create('cdtablereturns', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('return_id');
             $table->integer('rent_id');
             $table->dateTime('day_return');
             $table->integer('payment');

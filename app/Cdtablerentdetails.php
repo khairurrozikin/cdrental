@@ -8,9 +8,9 @@ class Cdtablerentdetails extends Model{
      *
      * @var array
      */
-    protected $filLable = [
-        'rent_id','item_id','qty_id'
-    ];
+    protected $filLable = ['rent_id','item_id','qty_id'];
+    protected $primaryKey = ['rentdtl_id'];
+    protected $table = ['cdtabledetails'];
 
     /**
      *  The attributes excluded from the model's JSON form.

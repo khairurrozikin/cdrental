@@ -8,9 +8,9 @@ class Cdmembers extends Model{
      *
      * @var array
      */
-    protected $filLable = [
-        'name','address','phone','ktp','member_date','active_date'
-    ];
+    protected $filLable = ['name','address','phone','ktp','member_date','active_date'];
+    protected $primaryKey = ['member_id'];
+    protected $table = ['cdmembers'];
 
     /**
      * The attributes excluded from the model's JSON form.

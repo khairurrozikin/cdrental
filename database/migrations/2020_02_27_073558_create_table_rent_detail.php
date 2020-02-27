@@ -14,7 +14,7 @@ class CreateTableRentDetail extends Migration
     public function up()
     {
         Schema::create('cdtablerentdetails', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('rentdtl_id');
             $table->integer('rent_id');
             $table->integer('item_id');
             $table->integer('qty_id');

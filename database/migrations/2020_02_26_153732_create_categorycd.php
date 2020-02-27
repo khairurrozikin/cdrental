@@ -14,7 +14,7 @@ class CreateCategorycd extends Migration
     public function up()
     {
         Schema::create('cdcategorys', function (Blueprint $table){
-            $table->bigIncrements('id');
+            $table->bigIncrements('catecory_id');
             $table->string('name',100);
         });
     }

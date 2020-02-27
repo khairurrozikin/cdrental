@@ -14,7 +14,7 @@ class CreateTableRent extends Migration
     public function up()
     {
         Schema::create('cdtablerents', function (Blueprint $table){
-            $table->bigIncrements('id');
+            $table->increments('rent_id');
             $table->integer('member_id');
             $table->dateTime('day_rent');
         });

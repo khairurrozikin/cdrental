@@ -14,7 +14,7 @@ class CreateMembercd extends Migration
     public function up()
     {
         Schema::create('cdmembers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('member_id');
             $table->string('name',25);
             $table->string('address',255);
             $table->string('phone',20);

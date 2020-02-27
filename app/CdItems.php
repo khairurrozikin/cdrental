@@ -8,9 +8,9 @@ class Cditems extends Model{
      *
      * @var array
      */
-    protected $filLable = [
-        'title','rate','catecory','qty','price_item','price_rent'
-    ];
+    protected $filLable = ['title','rate','catecory','qty','price_item','price_rent'];
+    protected $primaryKey = ['item_id'];
+    protected $table = ['cditems'];
 
     /**
      *  The attributes excluded from the model's JSON form.

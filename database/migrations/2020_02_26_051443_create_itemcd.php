@@ -14,7 +14,7 @@ class CreateItemcd extends Migration
     public function up()
     {
         Schema::create('cditems', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('item_id');
             $table->string('title',255);
             $table->float('rate',8,2);
             $table->string('category',255);
