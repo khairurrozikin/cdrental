@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\CdItems;
+use App\Cditems;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller{
     public function showAllCdItems(){
-        return response()->json(CdItems::all());
+        return response()->json(Cditems::all());
     }
 }

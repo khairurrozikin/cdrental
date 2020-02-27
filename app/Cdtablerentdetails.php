@@ -2,14 +2,14 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Cditems extends Model{
+class Cdtablerentdetails extends Model{
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $filLable = [
-        'title','rate','catecory','qty','price_item','price_rent'
+        'rent_id','item_id','qty_id'
     ];
 
     /**

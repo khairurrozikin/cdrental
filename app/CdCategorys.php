@@ -2,7 +2,7 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class CdCategorys extends Model{
+class Cdcategorys extends Model{
     /**
      * The attributes that are mass assignable.
      *

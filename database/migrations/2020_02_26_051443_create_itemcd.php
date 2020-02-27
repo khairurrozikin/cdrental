@@ -13,7 +13,7 @@ class CreateItemcd extends Migration
      */
     public function up()
     {
-        Schema::create('cdItems', function (Blueprint $table) {
+        Schema::create('cditems', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title',255);
             $table->float('rate',8,2);
@@ -32,6 +32,6 @@ class CreateItemcd extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cdItems');
+        Schema::dropIfExists('cditems');
     }
 }

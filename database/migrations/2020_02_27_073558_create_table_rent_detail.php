@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategorycd extends Migration
+class CreateTableRentDetail extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateCategorycd extends Migration
      */
     public function up()
     {
-        Schema::create('cdcategorys', function (Blueprint $table){
+        Schema::create('cdtablerentdetails', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',100);
-        });
+            $table->integer('rent_id');
+            $table->integer('item_id');
+            $table->integer('qty_id');
+            
+            $table->timestamps();
+        }); 
     }
 
     /**
@@ -26,6 +30,6 @@ class CreateCategorycd extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cdcategorys');
+        Schema::dropIfExists('cdtablerentdetails');   
     }
 }

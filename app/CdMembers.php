@@ -2,7 +2,7 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class CdMembers extends Model{
+class Cdmembers extends Model{
     /**
      * The attributes that are mass assignable.
      *
@@ -13,7 +13,7 @@ class CdMembers extends Model{
     ];
 
     /**
-     * The attributes that are mass assignable.
+     * The attributes excluded from the model's JSON form.
      *
      * @var array
      */

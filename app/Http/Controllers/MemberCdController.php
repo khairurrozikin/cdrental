@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\CdMembers;
+use App\Cdmembers;
 use Illuminate\Http\Request;
 
 class MemberCdController extends Controller{
     public function showAllCdMembers(){
-        return response()->json(CdMembers::all());
+        return response()->json(Cdmembers::all());
     }
 
     public function create(Request $request){
-        $cdmembers = new CdMembers;
+        $cdmembers = new Cdmembers;
 
         $cdmembers->name = $request->name;
         $cdmembers->address = $request->address;
@@ -25,7 +25,7 @@ class MemberCdController extends Controller{
     }
 
     public function destroy($id){
-        $cdmembers = CdMembers::find($id);
+        $cdmembers = Cdmembers::find($id);
         $cdmembers->delete();
 
         return response()->json('process remove successfully');
