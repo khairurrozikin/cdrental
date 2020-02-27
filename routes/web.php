@@ -26,8 +26,11 @@ $router->group(['prefix'=>'api'], function() use($router){
     $router->post('savemember', 'MemberCdController@create');
     $router->delete('delete/{id}', 'MemberCdController@destroy');
     $router->post('update/{id}', 'MemberCdController@update');
-    
+
     $router->get('cdcategory',['uses'=> 'CategoryCdController@showAllCdCategorys']);
+    $router->post('savecategory', 'CategoryCdController@create');
+    $router->delete('delete/{id}', 'CategoryCdController@destroy');
+    $router->post('update/{id}', 'CategoryCdController@update');
 
     $router->get('cdtablerent', ['uses'=> 'TableRentController@showAllCdTableRents']);
     $router->post('savetablerent', 'TableRentController@create');
@@ -35,6 +38,12 @@ $router->group(['prefix'=>'api'], function() use($router){
     $router->post('update/{id}', 'TableRentController@update');
 
     $router->get('cdtablereturn',['uses'=> 'TableReturnController@showAllCdTableReturn']);
+    $router->post('saveablereturn', 'TableReturnController@create');
+    $router->delete('delete/{id}', 'TableReturnController@destroy');
+    $router->post('update/{id}', 'TableReturnController@update');
 
     $router->get('cdtablerentdetail',['uses'=> 'TableRentDetailController@showAllCdTableRents']);
+    $router->post('savetablerentdetail', 'TableRentDetailController@create');
+    $router->delete('delete/{id}', 'TableRentDetailController@destroy');
+    $router->post('update/{id}', 'TableRentDetailController@update');
 });
